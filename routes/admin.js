@@ -2,12 +2,15 @@ const express = require("express");
 const { protect } = require("../middleware/auth");
 const authorize = require("../middleware/authorize");
 const router = express.Router();
-const { getUsers } = require("../controllers/admin");
+const { getUsers, updateUser, deleteUser } = require("../controllers/admin");
 
-router.post("/users", protect, authorize([ "Admin", "Moderator" ]), getUsers);
+// /users gives the data of all the users, and for that only Admin and Moderator roles will be authorized
+router.get("/users", protect, authorize([ "Admin", "Moderator" ]), getUsers);
 
-router.put("/users/:id", protect, authorize([ "Admin", "Moderator" ]), getUsers);
+// /users/:id can be used to update the user, and for that only Admin and Moderator roles will be authorized
+router.put("/users/:id", protect, authorize([ "Admin", "Moderator" ]), updateUser);
 
-router.delete("/users/:id", protect, authorize([ "Admin", "Moderator" ]), getUsers);
+// /delete can be used to delete the user, and for that only Admin and Moderator roles will be authorized
+router.delete("/users/:id", protect, authorize([ "Admin", "Moderator" ]), deleteUser);
 
 module.exports = router;

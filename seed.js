@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const connectDB = require("./config/db");
 const Role = require("./models/Role");
 const Permission = require("./models/Permission");
 const User = require("./models/User");
