@@ -5,7 +5,7 @@
 1) First install all denpendencies by using cmd
 > npm i
 
-2) * use node version 18 or above
+2) Use node version 18 or above
 
 3) To run use cmd
 > npm start
