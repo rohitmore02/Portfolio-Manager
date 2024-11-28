@@ -10,7 +10,7 @@
 3) To run use cmd
 > npm start
 
-# dependemcy installed
+# Dependencies installed
 
 1) express
 2) dotenv
