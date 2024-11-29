@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require("dotenv");
 const mongoose = require('mongoose');
+const cors = require("cors");
 
 // Load environment variables
 dotenv.config();
@@ -17,6 +18,7 @@ const app = express();
 app.use(express.json());
 // Middleware for Encoded Url's in payload
 // app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 // Routes
 app.use("/api/auth", require("./routes/auth"));  // Authentication routes
