@@ -17,3 +17,7 @@
 3) bcrypt
 4) jsonwebtoken
 5) mongoose
+
+# Postman Documentation
+
+https://documenter.getpostman.com/view/26386922/2sAYBXCB4C
